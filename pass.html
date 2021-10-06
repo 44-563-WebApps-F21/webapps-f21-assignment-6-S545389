@@ -32,6 +32,10 @@
 
 
     <p id="result">Your Phrase count will be shown here. </p>
+    <div class="container">
+        <img id = "animals" src="snake.png" class="img-fluid" alt="Snake" onclick="newimage(this)"
+         width="200" height="200" >
+    </div>
 
     <script>
         correct = 0;
@@ -61,7 +65,33 @@
                 alert("Please Phrase the word again.!!!")
             }
         }
+        var image = 1;
+function newImage(img){
+    
+    switch(image){
+        case 1:
+        document.getElementById("animals").src =  "snake.png" 
+        image = 2;
+        break;
 
+        case 2:
+        document.getElementById("animals").src = "rhino.png"
+        image = 3;
+        break;
+
+        case 3:
+        document.getElementById("animals").src = "elephant%20(2).png"
+        image = 1;
+        break;
+
+        default:
+        document.getElementById("animals").src =  "snake.png" 
+        image = 1;
+        break;
+
+
+    }
+}
      </script>
 
 </body>
