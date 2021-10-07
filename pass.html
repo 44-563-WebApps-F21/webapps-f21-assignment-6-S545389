@@ -20,7 +20,7 @@
         <label for="form1_guess_word">Enter a Phrase</label>
         <input type="text" id="form1_guess_word" name="form1_guess_word" autofocus> 
         <br>
-        <input type="button" onclick=" processPhrase()" value="Check the Phrase">
+        <input type="button" style="background-color: aqua;" onclick=" processPhrase()" value="Check the Phrase">
     </form>
     <p id="result">Your Phrase count will be shown here. </p>
     <div class="container">
@@ -50,6 +50,7 @@ correct = 0;
                     alert("Access Denied")
                     wrong = wrong + 1
                     result.innerHTML = "Correct guess Count: " + correct + "<br>" +"Wrong guess Count: " + wrong
+                    counter++;
                 }
                 
             } else {
