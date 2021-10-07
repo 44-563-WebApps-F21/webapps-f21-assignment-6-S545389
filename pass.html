@@ -28,7 +28,8 @@
          width="200" height="200" >
     </div>
     <script>
-        correct = 0;
+counter=0;
+correct = 0;
             wrong = 0;
         function processPhrase() {
             console.log("Checking the Guess......")
@@ -36,6 +37,8 @@
             guess_word = document.getElementById("form1_guess_word").value
             confirm_guess = confirm("Is this guess word? " + guess_word)
             result = document.getElementById("result")
+            if(counter<3)
+            {
             if (confirm_guess) {
                 if (secret_Word.localeCompare(guess_word) == 0) {
                     alert("Access Allowed.")
@@ -52,6 +55,10 @@
             } else {
                 alert("Please Phrase the word again.!!!")
             }
+        }
+        else{
+            alert("account locked.")
+        }
         }
         var image = 1;
 function newImage(){
